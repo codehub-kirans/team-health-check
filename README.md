@@ -1,6 +1,6 @@
 # Team Health Check
 
-A team (squad) health check application to help build team awareness perspective.
+A team (squad) health check application to help build team awareness and perspective.
 
 ## Running the application locally
 

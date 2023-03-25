@@ -1,17 +1,14 @@
 <script>
-  import MainNav from "./MainNav.svelte";
-  import { siteTitle } from "$lib/config";
+	import MainNav from './MainNav.svelte';
+	import { siteTitle } from '$lib/config';
 
-  const focusMain = () => {
-    const main = document.querySelector("main");
-    main.focus();
-  };
+	export let data;
 </script>
 
 <header>
-  <a href="/" class="site-title">
-    {siteTitle}
-  </a>
+	<a href="/" class="site-title">
+		{siteTitle}
+	</a>
 
-  <MainNav />
+	<MainNav {data} />
 </header>

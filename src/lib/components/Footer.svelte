@@ -1,12 +1,14 @@
 <script>
-  import MainNav from "./MainNav.svelte";
-  import { siteAuthor } from "$lib/config";
+	import MainNav from './MainNav.svelte';
+	import { siteAuthor } from '$lib/config';
+
+	export let data;
 </script>
 
 <footer>
-  <MainNav />
-  <p>
-    &copy; {new Date().getFullYear()}
-    {siteAuthor}. All rights reserved. <br />
-  </p>
+	<MainNav {data} />
+	<p>
+		&copy; {new Date().getFullYear()}
+		{siteAuthor}. All rights reserved. <br />
+	</p>
 </footer>

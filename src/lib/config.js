@@ -15,4 +15,12 @@ export const navItems = [
 		title: 'Register',
 		route: '/register'
 	},
+	{
+		title: 'Login',
+		route: '/login'
+	},
+	{
+		title: 'Logout',
+		route: '/logout'
+	},
 ]

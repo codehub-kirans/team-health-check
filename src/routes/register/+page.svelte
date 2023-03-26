@@ -20,6 +20,19 @@
 		<label for="username">Username</label>
 		<input id="username" type="text" placeholder="john" name="username" minlength="4" required />
 
+		<label for="email">Email</label>
+		<input
+			id="email"
+			type="email"
+			placeholder="johndoe@domain.com"
+			name="email"
+			minlength="7"
+			required
+		/>
+
+		<label for="team">Team Name</label>
+		<input id="team" type="text" placeholder="team name" name="team" minlength="3" required />
+
 		<label for="password">Password</label>
 		<input
 			id="password"

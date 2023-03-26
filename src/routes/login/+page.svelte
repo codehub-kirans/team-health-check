@@ -2,7 +2,7 @@
 	<fieldset>
 		<legend>Enter Credentials</legend>
 		<label for="username">Username</label>
-		<input id="username" type="text" placeholder="john" name="username" minlength="4" required />
+		<input id="username" type="text" placeholder="johndoe" name="username" minlength="4" required />
 
 		<label for="password">Password</label>
 		<input
@@ -14,6 +14,8 @@
 			required
 		/>
 		<span id="message" />
+
+		<a href="/reset-password">Forgot Password?</a>
 	</fieldset>
 
 	<button>Submit</button>

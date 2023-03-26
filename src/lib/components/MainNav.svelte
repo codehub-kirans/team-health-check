@@ -9,18 +9,20 @@
 
 <ul>
 	{#each navItems as page}
-		<li>
-			{#if !data.user}
-				{#if !page.title.startsWith('Logout')}
+		{#if !data.user}
+			{#if !page.title.startsWith('Logout')}
+				<li>
 					<NavItem href={page.route}>
 						{page.title}
 					</NavItem>
-				{/if}
-			{:else}
+				</li>
+			{/if}
+		{:else if !page.title.startsWith('Login') && !page.title.startsWith('Register')}
+			<li>
 				<NavItem href={page.route}>
 					{page.title}
 				</NavItem>
-			{/if}
-		</li>
+			</li>
+		{/if}
 	{/each}
 </ul>

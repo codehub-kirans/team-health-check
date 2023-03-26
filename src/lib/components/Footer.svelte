@@ -5,12 +5,12 @@
 	export let data;
 </script>
 
-<footer class="container">
+<footer class="container-fluid">
 	<nav>
 		<MainNav {data} />
 	</nav>
-	<p>
+	<small>
 		&copy; {new Date().getFullYear()}
 		{siteAuthor}. All rights reserved. <br />
-	</p>
+	</small>
 </footer>

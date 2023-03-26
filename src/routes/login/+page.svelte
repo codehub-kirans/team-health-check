@@ -1,22 +1,36 @@
-<form action="?/login" method="POST">
-	<fieldset>
-		<legend>Enter Credentials</legend>
-		<label for="username">Username</label>
-		<input id="username" type="text" placeholder="johndoe" name="username" minlength="4" required />
+<h1>Login</h1>
 
-		<label for="password">Password</label>
-		<input
-			id="password"
-			type="password"
-			name="password"
-			minlength="3"
-			placeholder="new password"
-			required
-		/>
-		<span id="message" />
+<article>
+	<div>
+		<hgroup><h2>Enter Credentials</h2></hgroup>
+		<form action="?/login" method="POST">
+			<fieldset>
+				<legend />
+				<label for="username">Username</label>
+				<input
+					id="username"
+					type="text"
+					placeholder="johndoe"
+					name="username"
+					minlength="4"
+					required
+				/>
 
-		<a href="/reset-password">Forgot Password?</a>
-	</fieldset>
+				<label for="password">Password</label>
+				<input
+					id="password"
+					type="password"
+					name="password"
+					minlength="3"
+					placeholder="new password"
+					required
+				/>
+				<span id="message" />
 
-	<button>Submit</button>
-</form>
+				<a href="/reset-password">Forgot Password?</a>
+			</fieldset>
+
+			<button>Submit</button>
+		</form>
+	</div>
+</article>

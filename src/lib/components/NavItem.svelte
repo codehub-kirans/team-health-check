@@ -3,11 +3,17 @@
 
 	export let href;
 
-	$: isCurrentPage = $currentPage.startsWith(href);
+	$: isCurrentPage = $currentPage.endsWith(href);
 </script>
 
 <li>
-	<a {href} class:active={isCurrentPage} aria-current={isCurrentPage ? 'page' : false}>
-		<slot />
-	</a>
+	{#if isCurrentPage}
+		<a {href} class="contrast">
+			<slot />
+		</a>
+	{:else}
+		<a {href}>
+			<slot />
+		</a>
+	{/if}
 </li>

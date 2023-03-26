@@ -5,12 +5,12 @@
 	export let data;
 </script>
 
-<header class="container">
+<header class="container-fluid">
 	<nav>
 		<ul>
 			<li>
 				<strong>
-					<a href="/">
+					<a href="/" class="secondary">
 						{siteTitle}
 					</a>
 				</strong>

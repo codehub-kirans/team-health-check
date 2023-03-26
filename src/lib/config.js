@@ -12,6 +12,10 @@ export const siteAuthor = 'Kiran S'
 // Controls the main nav menu. (Also used by the footer and mobile nav.)
 export const navItems = [
 	{
+		title: 'Home',
+		route: '/'
+	},
+	{
 		title: 'Register',
 		route: '/register'
 	},

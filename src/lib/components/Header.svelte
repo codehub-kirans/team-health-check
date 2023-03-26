@@ -5,10 +5,18 @@
 	export let data;
 </script>
 
-<header>
-	<a href="/" class="site-title">
-		{siteTitle}
-	</a>
+<header class="container">
+	<nav>
+		<ul>
+			<li>
+				<strong>
+					<a href="/">
+						{siteTitle}
+					</a>
+				</strong>
+			</li>
+		</ul>
 
-	<MainNav {data} />
+		<MainNav {data} />
+	</nav>
 </header>

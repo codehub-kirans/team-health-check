@@ -6,9 +6,10 @@
 </script>
 
 <!-- Contents of this file will be used in the header -->
-<nav>
-	<ul>
-		{#each navItems as page}
+
+<ul>
+	{#each navItems as page}
+		<li>
 			{#if !data.user}
 				{#if !page.title.startsWith('Logout')}
 					<NavItem href={page.route}>
@@ -20,6 +21,6 @@
 					{page.title}
 				</NavItem>
 			{/if}
-		{/each}
-	</ul>
-</nav>
+		</li>
+	{/each}
+</ul>

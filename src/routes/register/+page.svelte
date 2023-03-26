@@ -1,13 +1,17 @@
 <script>
 	function checkPasswordMatch() {
-		if (
-			document.getElementById('password').value == document.getElementById('passwordConfirm').value
-		) {
-			document.getElementById('message').style.color = 'green';
-			document.getElementById('message').innerHTML = 'matching';
+		const password = document.getElementById('password');
+		const passwordConfirm = document.getElementById('passwordConfirm');
+		const message = document.getElementById('message');
+
+		if (password.value == passwordConfirm.value) {
+			message.style.color = 'green';
+			message.innerHTML = 'matching';
+			passwordConfirm.setAttribute('aria-invalid', 'false');
 		} else {
-			document.getElementById('message').style.color = 'red';
-			document.getElementById('message').innerHTML = 'not matching';
+			message.style.color = 'red';
+			message.innerHTML = 'not matching';
+			passwordConfirm.setAttribute('aria-invalid', 'true');
 		}
 	}
 </script>
@@ -41,7 +45,6 @@
 			minlength="3"
 			placeholder="new password"
 			required
-			on:keyup={checkPasswordMatch}
 		/>
 		<label for="passwordConfirm">Verify Password</label>
 		<input

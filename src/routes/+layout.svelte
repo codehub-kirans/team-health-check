@@ -1,4 +1,6 @@
 <script>
+	import '@picocss/pico';
+	import '$lib/assets/css/app.css';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import { currentPage } from '$lib/assets/js/store';
@@ -32,7 +34,7 @@
 <Header {data} />
 
 {#key data.path}
-	<main>
+	<main class="container">
 		<slot />
 	</main>
 {/key}

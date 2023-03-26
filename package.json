@@ -22,6 +22,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@picocss/pico": "^1.5.7",
 		"pocketbase": "^0.13.0"
 	}
 }

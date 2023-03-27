@@ -8,24 +8,23 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr><th scope="row">1. Delivering Value</th></tr>
-			<tr><th scope="row">2. Task Planning & Priority</th></tr>
-			<tr><th scope="row">3. Mission and Long Term Goal</th></tr>
-			<tr><th scope="row">4. Code Base Health</th></tr>
-			<tr><th scope="row">5. Challenging the Status Quo</th></tr>
-			<tr><th scope="row">6. Support within Team</th></tr>
-			<tr><th scope="row">7. Learning And Fun</th></tr>
-			<tr><th scope="row">8. Respect And Appreciation</th></tr>
-			<tr><th scope="row">9. Learning from Mistakes</th></tr>
-			<tr><th scope="row">10. Team Work</th></tr>
-			<tr><th scope="row">11. Pawns or Players</th></tr>
-			<tr><th scope="row">12. Product Ownership</th></tr>
-			<tr><th scope="row">13. Speed & Incremental Deliveries</th></tr>
-			<tr><th scope="row">14. Meeting Effectiveness</th></tr>
-			<tr><th scope="row">15. Our Habits and Processes</th></tr>
-			<tr><th scope="row">16. Tooling</th></tr>
-			<tr><th scope="row">17. Ease of Release</th></tr>
-			<tr><th scope="row">18. Leading Team by Example</th></tr>
+			<ol>
+				<tr><th scope="row"><li>Delivering Value</li></th></tr>
+				<tr><th scope="row"><li>Code Base Health</li></th></tr>
+				<tr><th scope="row"><li>Task Planning & Priority</li></th></tr>
+				<tr><th scope="row"><li>Information sharing</li></th></tr>
+				<tr><th scope="row"><li>Team Work</li></th></tr>
+				<tr><th scope="row"><li>Events</li></th></tr>
+				<tr><th scope="row"><li>Learning And Fun</li></th></tr>
+				<tr><th scope="row"><li>Pawns or Players</li></th></tr>
+				<tr><th scope="row"><li>Product Ownership</li></th></tr>
+				<tr><th scope="row"><li>Speed & Incremental Deliveries</li></th></tr>
+				<tr><th scope="row"><li>Easy to Release</li></th></tr>
+				<tr><th scope="row"><li>Suitable Processes</li></th></tr>
+				<tr><th scope="row"><li>Tooling</li></th></tr>
+				<tr><th scope="row"><li>Support</li></th></tr>
+				<tr><th scope="row"><li>Leading Team by Example</li></th></tr>
+			</ol>
 		</tbody>
 		<tfoot>
 			<th scope="row">Overall</th>

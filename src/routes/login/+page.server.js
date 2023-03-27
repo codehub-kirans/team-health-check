@@ -3,12 +3,21 @@ import { error, redirect } from '@sveltejs/kit';
 // Cannot prerender pages with actions
 export const prerender = false;
 
+
+export const load = ({ locals }) => {
+    if (locals.pb.authStore.isValid) {
+        throw redirect(303, '/');
+    }
+};
+
 export const actions = {
     login: async ({ request, locals }) => {
         const body = Object.fromEntries(await request.formData());
 
         try {
-            await locals.pb.collection('users').authWithPassword(body.username, body.password);
+            await locals.pb
+                .collection('users')
+                .authWithPassword(body.username, body.password);
             /* enable when using a mail verification service
             if (!locals.pb?.authStore?.model?.verified) {
                 locals.pb.authStore.clear();
@@ -19,7 +28,7 @@ export const actions = {
             */
         } catch (err) {
             console.log('Error: ', err);
-            throw error(500, 'Something went wrong logging in');
+            throw error(err.status, err.message);
         }
 
         throw redirect(303, '/');

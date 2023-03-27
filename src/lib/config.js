@@ -24,8 +24,12 @@ export const navItems = [
 		route: '/login'
 	},
 	{
-		title: 'Health Check Dashboard',
-		route: '/health-check'
+		title: 'Dashboard',
+		route: '/dashboard'
+	},
+	{
+		title: 'Voting',
+		route: '/voting'
 	},
 	{
 		title: 'Logout',

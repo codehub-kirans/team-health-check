@@ -1,4 +1,5 @@
 <script>
+	import { ColumnRender } from '$lib/components';
 	export let data;
 	let recordCount = 1;
 </script>
@@ -14,101 +15,72 @@
 			<thead>
 				<tr>
 					<th scope="col">Category</th>
-					{#each data.records as record}
+					<ColumnRender {data} fieldName="sprint" />
+					<!-- {#each data.records as record}
 						<td>{record.sprint}</td>
-					{/each}
+					{/each} -->
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<th scope="row">{recordCount++}. Delivering Value</th>
-					{#each data.records as record}
-						<td>{record.delivering_value}</td>
-					{/each}
+					<ColumnRender {data} fieldName="delivering_value" />
 				</tr>
 				<tr>
 					<th scope="row">{recordCount++}. Code Base Health</th>
-					{#each data.records as record}
-						<td>{record.code_base_health}</td>
-					{/each}
+					<ColumnRender {data} fieldName="code_base_health" />
 				</tr>
 				<tr>
 					<th scope="row">{recordCount++}. Task Planning & Priority</th>
-					{#each data.records as record}
-						<td>{record.task_planning_and_priority}</td>
-					{/each}
+					<ColumnRender {data} fieldName="task_planning_and_priority" />
 				</tr>
-				<tr
-					><th scope="row">{recordCount++}. Information sharing</th>
-					{#each data.records as record}
-						<td>{record.information_sharing}</td>
-					{/each}
+				<tr>
+					<th scope="row">{recordCount++}. Information sharing</th>
+					<ColumnRender {data} fieldName="information_sharing" />
 				</tr>
-				<tr
-					><th scope="row">{recordCount++}. Team Work</th>
-					{#each data.records as record}
-						<td>{record.team_work}</td>
-					{/each}
+				<tr>
+					<th scope="row">{recordCount++}. Team Work</th>
+					<ColumnRender {data} fieldName="team_work" />
 				</tr>
 				<tr>
 					<th scope="row">{recordCount++}. Events</th>
-					{#each data.records as record}
-						<td>{record.events}</td>
-					{/each}
+					<ColumnRender {data} fieldName="events" />
 				</tr>
 				<tr>
 					<th scope="row">{recordCount++}. Learning And Fun</th>
-					{#each data.records as record}
-						<td>{record.learning_and_fun}</td>
-					{/each}
+					<ColumnRender {data} fieldName="learning_and_fun" />
 				</tr>
 				<tr>
 					<th scope="row">{recordCount++}. Pawns or Players</th>
-					{#each data.records as record}
-						<td>{record.pawns_or_players}</td>
-					{/each}
+					<ColumnRender {data} fieldName="pawns_or_players" />
 				</tr>
 				<tr>
 					<th scope="row">{recordCount++}. Product Ownership</th>
-					{#each data.records as record}
-						<td>{record.code_base_health}</td>
-					{/each}
+					<ColumnRender {data} fieldName="product_ownership" />
 				</tr>
 				<tr>
 					<th scope="row">{recordCount++}. Speed & Incremental Deliveries</th>
-					{#each data.records as record}
-						<td>{record.product_ownership}</td>
-					{/each}
+					<ColumnRender {data} fieldName="speed_and_incremental_deliveries" />
 				</tr>
 				<tr>
 					<th scope="row">{recordCount++}. Easy to Release</th>
-					{#each data.records as record}
-						<td>{record.easy_to_release}</td>
-					{/each}
+					<ColumnRender {data} fieldName="easy_to_release" />
 				</tr>
 				<tr>
 					<th scope="row">{recordCount++}. Suitable Processes</th>
-					{#each data.records as record}
-						<td>{record.suitable_processes}</td>
-					{/each}
+					<ColumnRender {data} fieldName="suitable_processes" />
 				</tr>
 				<tr>
 					<th scope="row">{recordCount++}. Tooling</th>
-					{#each data.records as record}
-						<td>{record.tooling}</td>
-					{/each}
+					<ColumnRender {data} fieldName="tooling" />
 				</tr>
 				<tr>
 					<th scope="row">{recordCount++}. Support</th>
-					{#each data.records as record}
-						<td>{record.support}</td>
-					{/each}
+					<ColumnRender {data} fieldName="support" />
 				</tr>
 				<tr>
 					<th scope="row">{recordCount++}. Leading Team by Example</th>
-					{#each data.records as record}
-						<td>{record.leading_team_by_example}</td>
-					{/each}
+					<ColumnRender {data} fieldName="leading_team_by_example" />
 				</tr>
 			</tbody>
 			<!-- <tfoot>

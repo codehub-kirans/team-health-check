@@ -20,49 +20,52 @@
 
 <article class="grid">
 	<div>
-		<hgroup><h2>Enter Credentials</h2></hgroup>
+		<hgroup><h2>Register Credentials</h2></hgroup>
 		<form action="?/register" method="POST">
 			<fieldset>
 				<legend />
-				<label for="username">Username</label>
 				<input
-					id="username"
 					type="text"
-					placeholder="john"
 					name="username"
+					placeholder="Username"
+					aria-label="Username"
 					minlength="4"
 					required
 				/>
 
-				<label for="email">Email</label>
 				<input
-					id="email"
 					type="email"
-					placeholder="johndoe@domain.com"
 					name="email"
+					placeholder="Email Address"
+					aria-label="Email Address"
 					minlength="7"
 					required
 				/>
 
-				<label for="team">Team Name</label>
-				<input id="team" type="text" placeholder="team name" name="team" minlength="3" required />
-
-				<label for="password">Password</label>
 				<input
-					id="password"
-					type="password"
-					name="password"
+					type="text"
+					name="team"
+					placeholder="Team Name"
+					aria-label="Team Name"
 					minlength="3"
-					placeholder="new password"
 					required
 				/>
-				<label for="passwordConfirm">Verify Password</label>
+
 				<input
-					id="passwordConfirm"
+					name="password"
 					type="password"
-					name="passwordConfirm"
 					minlength="3"
-					placeholder="confirm password"
+					placeholder="New Password"
+					aria-label="New Password"
+					required
+				/>
+
+				<input
+					name="passwordConfirm"
+					type="password"
+					minlength="3"
+					placeholder="Confirm Password"
+					aria-label="Confirm Password"
 					required
 					on:keyup={checkPasswordMatch}
 				/>

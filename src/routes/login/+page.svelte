@@ -1,28 +1,26 @@
 <h1>Login</h1>
 
-<article>
+<article class="grid">
 	<div>
 		<hgroup><h2>Enter Credentials</h2></hgroup>
 		<form action="?/login" method="POST">
 			<fieldset>
 				<legend />
-				<label for="username">Username</label>
 				<input
-					id="username"
 					type="text"
-					placeholder="johndoe"
 					name="username"
+					placeholder="Login"
+					aria-label="Login"
 					minlength="4"
 					required
 				/>
 
-				<label for="password">Password</label>
 				<input
-					id="password"
 					type="password"
 					name="password"
 					minlength="3"
-					placeholder="new password"
+					placeholder="Password"
+					aria-label="Password"
 					required
 				/>
 				<span id="message" />

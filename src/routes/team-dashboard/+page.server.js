@@ -10,11 +10,11 @@ export const load = ({ locals }) => {
     const getSurveyRecords = async () => {
         try {
             const records = serializeNonPOJOs(
-                await locals.pb.collection('teamhealth').getFullList({
-                    sort: '-created',
+                await locals.pb.collection('team_summary').getFullList({
+                    sort: '-sprint',
                 })
             );
-            console.log(records);
+            // console.log('Team Dashboard', records);
             return records;
         } catch (err) {
             console.log('Error: ', err);

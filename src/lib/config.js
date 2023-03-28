@@ -24,8 +24,12 @@ export const navItems = [
 		route: '/login'
 	},
 	{
-		title: 'Dashboard',
-		route: '/dashboard'
+		title: 'Team Dashboard',
+		route: '/team-dashboard'
+	},
+	{
+		title: 'My Dashboard',
+		route: '/my-dashboard'
 	},
 	{
 		title: 'Voting',

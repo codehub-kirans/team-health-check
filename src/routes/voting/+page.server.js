@@ -11,14 +11,14 @@ export const actions = {
         const formData = await request.formData();
 
         formData.append('user', locals.user.id);
-        console.log(formData);
+        // console.log(formData);
         try {
-            await locals.pb.collection('teamhealth').create(formData);
+            await locals.pb.collection('team_health').create(formData);
         } catch (err) {
             console.log('Error: ', err);
             throw error(err.status, err.message);
         }
 
-        throw redirect(303, '/dashboard');
+        throw redirect(303, '/team-dashboard');
     }
 };

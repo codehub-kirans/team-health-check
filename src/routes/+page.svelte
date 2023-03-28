@@ -28,73 +28,94 @@
 	<p>Following are the detailed descriptions of the behavior anchors</p>
 	<ol>
 		<li>
-			Delivering value: Good: We deliver great stuff! We're proud of it and our stakeholders are
-			really happy. Bad: We deliver bad quality. We are not of it and our stakeholders unhappy.
+			<b>Delivering value: </b><br />
+			<b style="color: green;"> Good: </b>We deliver great stuff! We're proud of it and our
+			stakeholders are really happy.
+			<br /><b style="color: red;"> Bad: </b> We deliver bad quality. We are not of it and our stakeholders
+			unhappy.
 		</li>
 		<li>
-			Codebase Health: Good: We're proud of the quality of our code! It is clean, easy to read and
-			has great test coverage. Bad: Our code is messy and difficult to maintain.
+			<b>Codebase Health: </b><br /><b style="color: green;"> Good: </b>We're proud of the quality
+			of our code! It is clean, easy to read and has great test coverage. <br />
+			<b style="color: red;"> Bad: </b> Our code is messy and difficult to maintain.
 		</li>
 		<li>
-			Task Planning & Priority: Good: I'm clear about the planned tasks and its priority in my
-			backlog. Bad: I'm not clear about my assigned tasks and its dependencies and I'm unsure if I
-			can deliver on commitments.
+			<b>Task Planning & Priority: </b><br /><b style="color: green;"> Good: </b>I'm clear about the
+			planned tasks and its priority in my backlog. <br />
+			<b style="color: red;"> Bad: </b> I'm not clear about my assigned tasks and its dependencies and
+			I'm unsure if I can deliver on commitments.
 		</li>
 		<li>
-			Information sharing: Good: We always have the right information about changes/decisions that
-			affect out work. Bad: We never receive updates consistently and this affects our day to day
-			work
+			<b>Information sharing: </b><br /><b style="color: green;"> Good: </b>We always have the right
+			information about changes/decisions that affect out work. <br />
+			<b style="color: red;"> Bad: </b> We never receive updates consistently and this affects our day
+			to day work
 		</li>
 		<li>
-			Teamwork: Good: We are a great team that works great together. We respect each other and share
-			appreciation for the good work. Bad: We are a bunch of individuals who neither know nor care
-			what the others on the team are doing.
+			<b>Teamwork: </b><br /><b style="color: green;"> Good: </b>We are a great team that works
+			great together. We respect each other and share appreciation for the good work. <br />
+			<b style="color: red;"> Bad: </b> We are a bunch of individuals who neither know nor care what
+			the others on the team are doing.
 		</li>
 		<li>
-			Events: Good: Our meetings including standups, planning, reviews and retrospectives are
-			regular and effective. Bad: Our meetings are ineffective and do not follow a regular cadence.
+			<b>Events:</b><br /><b style="color: green;"> Good: </b>Our meetings including standups,
+			planning, reviews and retrospectives are regular and effective. <br />
+			<b style="color: red;"> Bad: </b> Our meetings are ineffective and do not follow a regular cadence.
 		</li>
 		<li>
-			Learning and Fun: Good: We are constantly learning new things and from our mistakes,
-			upskilling ourselves along the way. Bad: We never have time to learn anything and worse we
-			never learn from our mistakes.
+			<b>Learning and Fun: </b><br /><b style="color: green;"> Good: </b>We are constantly learning
+			new things and from our mistakes, upskilling ourselves along the way. We love our work and we
+			have a lot of fun together. <br />
+			<b style="color: red;"> Bad: </b> The work is boring and we never have time to learn anything.
+			Worse yet, we never learn from our mistakes.
 		</li>
 		<li>
-			Pawns or Players: Good: We are in control of our own destiny! We hava autonomy with purpose
-			and mastery of our competence areas and decide what to build and how to build it. Bad: We are
-			just pawns in a game of chess with no influence over what we build or how we build it.
+			<b>Pawns or Players: </b><br /><b style="color: green;"> Good: </b>We are in control of our
+			own destiny! We hava autonomy with purpose and mastery of our competence areas and decide what
+			to build and how to build it. <br />
+			<b style="color: red;"> Bad: </b> We are just pawns in a game of chess with no influence over what
+			we build or how we build it.
 		</li>
 		<li>
-			Product Ownership: Good: We are happy with the current state of our backlog and its relevance
-			to the business. Bad: Our backlog is messy and does not seem to deliver value for its
-			stakeholders.
+			<b>Product Ownership:</b><br /> <b style="color: green;"> Good: </b>We are happy with the
+			current state of our backlog and its relevance to the business. <br /><b style="color: red;">
+				Bad:
+			</b> Our backlog is messy and does not seem to deliver value for its stakeholders.
 		</li>
 		<li>
-			Speed & Incremental Deliveries: Good: We get stuff done really quickly! No waiting and no
-			delays. Bad: We never seem to get anything done. We keep getting stuck or interrupted. Stories
-			keep getting stuck on dependencies.
+			<b>Speed & Incremental Deliveries: </b><br /><b style="color: green;"> Good: </b>We get stuff
+			done really quickly! No waiting and no delays. <br />
+			<b style="color: red;"> Bad: </b> We never seem to get anything done. We keep getting stuck or
+			interrupted. Stories keep getting stuck on dependencies.
 		</li>
 		<li>
-			Easy to release: Good: Releasing is simple, safe, painless and mostly automated. Bad:
-			Releasing is risky, painful, lots of manual work and takes forever. Fun: Good: We love our
-			work and we have a lot of fun together. Bad: The work is boring.
+			<b>Easy to release: </b><br /><b style="color: green;">
+				<b style="color: green;"> Good: </b></b
+			>Releasing is simple, safe, painless and mostly automated. <br />
+			<b style="color: red;"> Bad: </b>
+			Releasing is risky, painful, lots of manual work and takes forever.
 		</li>
 		<li>
-			Suitable processes: Good: Our way of working fits us perfectly. Bad: Our way of working sucks!
+			<b>Suitable processes: </b><br /><b style="color: green;"> Good: </b>Our way of working fits
+			us perfectly. <br /><b style="color: red;"> Bad: </b> Our way of working sucks!
 		</li>
 		<li>
-			Tooling: Good: We are agile use productivity and engineering tools effectively to deliver
-			greater value Bad: We are unable to use contemporary tools and are stuck with old legacy
-			tools.
+			<b>Tooling: </b><br /><b style="color: green;"> Good: </b>We are agile use productivity and
+			engineering tools effectively to deliver greater value <br />
+			<b style="color: red;"> Bad: </b>
+			We are unable to use contemporary tools and are stuck with old legacy tools.
 		</li>
 		<li>
-			Support: Good: We always get great support and help when we ask for it! Bad: We keep getting
-			stuck because we can't get the support and help that we ask for.
+			<b>Support: </b><br /><b style="color: green;"> Good: </b>We always get great support and help
+			when we ask for it! <br />
+			<b style="color: red;"> Bad: </b> We keep getting stuck because we can't get the support and help
+			that we ask for.
 		</li>
 		<li>
-			Leading Team by Example: Good: Our manager always leads by example and can be trusted to
-			follow through on promised actions Bad: Our manager does not communicate effectively and
-			cannot help team to deliver value.
+			<b>Leading Team by Example: </b><br /><b style="color: green;"> Good: </b>Our manager always
+			leads by example and can be trusted to follow through on promised actions <br />
+			<b style="color: red;"> Bad: </b> Our manager does not communicate effectively and cannot help
+			team to deliver value.
 		</li>
 	</ol>
 </article>

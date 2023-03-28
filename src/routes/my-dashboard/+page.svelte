@@ -4,11 +4,11 @@
 	let recordCount = 1;
 </script>
 
-<h1>Team Health Check Dashboard</h1>
+<h1>My Voting History Dashboard</h1>
 {#if data.records.length === 0}
-	<p>Looks like no health check data is available.</p>
+	<p>Looks like you have not voted yet.</p>
 {:else}
-	Table has {data.records.length} entries.
+	You have voted {data.records.length} time(s).
 	<figure>
 		<table role="grid">
 			<caption><strong>Health Check Trend</strong></caption>
@@ -16,9 +16,6 @@
 				<tr>
 					<th scope="col">Category</th>
 					<ColumnRender {data} fieldName="sprint" />
-					<!-- {#each data.records as record}
-						<td>{record.sprint}</td>
-					{/each} -->
 				</tr>
 			</thead>
 			<tbody>

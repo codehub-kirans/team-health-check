@@ -10,7 +10,7 @@
 <ul>
 	{#each navItems as page}
 		{#if !data.user}
-			{#if !page.title.startsWith('Logout') && !page.title.startsWith('Voting')}
+			{#if !page.title.startsWith('Logout') && !page.title.startsWith('Voting') && !page.title.startsWith('My Dashboard') && !page.title.startsWith('Team Dashboard')}
 				<li>
 					<NavItem href={page.route}>
 						{page.title}

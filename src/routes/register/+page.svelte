@@ -75,4 +75,5 @@
 			<button>Submit</button>
 		</form>
 	</div>
+	<div style="background-image: url('register-image.jpg');" />
 </article>

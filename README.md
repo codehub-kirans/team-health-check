@@ -2,9 +2,13 @@
 
 A team (squad) health check application to help build team awareness and perspective.
 
+<p align="center">
+  <img alt="Team Dashboard" src="https://github.com/codehub-kirans/team-health-check/blob/main/static/dashboard-example.png?raw=true">
+</p>
+
 ## Running the application locally
 
-1.  Once you've cloned the project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start the backend server:
+1.  Once you've cloned the project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start the backend server (download the pocketbase binary for your platform from https://pocketbase.io/docs/):
 
 ```bash
 # Admin UI will be available at the default port 8090

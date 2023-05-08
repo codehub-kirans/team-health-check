@@ -9,18 +9,9 @@
 	export let required = false;
 </script>
 
-<div class="form-control w-full max-w-lg mb-2">
-	<label for={id} class="label font-medium pb-1">
-		<span class="label-text">{label}</span>
+<div>
+	<label for={id}>
+		<span>{label}</span>
 	</label>
-	<input
-		class="input input-bordered w-full max-w-lg"
-		{type}
-		{placeholder}
-		{required}
-		{disabled}
-		{id}
-		name={id}
-		{value}
-	/>
+	<input {type} {placeholder} {required} {disabled} {id} name={id} {value} />
 </div>

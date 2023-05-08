@@ -36,6 +36,10 @@ export const navItems = [
 		route: '/voting'
 	},
 	{
+		title: 'My Settings',
+		route: '/my-settings'
+	},
+	{
 		title: 'Logout',
 		route: '/logout'
 	},

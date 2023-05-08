@@ -31,5 +31,5 @@
 			<button>Submit</button>
 		</form>
 	</div>
-	<div />
+	<div style="background-image: url('hero-image.jpg');" />
 </article>

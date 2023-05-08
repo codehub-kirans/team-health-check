@@ -15,7 +15,7 @@
 	 * the current page in the nav, but could be useful for other purposes.)
 	 **/
 	$: currentPage.set(data.path);
-	console.log(data.path);
+	// console.log(data.path); //for route request debugging
 
 	/**
 	 * This pre-fetches all top-level routes on the site in the background for faster loading.

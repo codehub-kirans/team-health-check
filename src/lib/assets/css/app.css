@@ -104,7 +104,7 @@ summary[role='link'].secondary:is([aria-current], :hover, :active, :focus) {
 article div:nth-of-type(2) {
 	display: none;
 	background-color: #374956;
-	background-image: url('hero-image.jpg');
+	/* background-image: url('hero-image.jpg'); */
 	background-position: center;
 	background-size: cover;
 }
@@ -118,4 +118,72 @@ article div:nth-of-type(2) {
 /* Footer */
 body > footer {
 	padding: 1rem 0;
+}
+
+/* CSS code for divider */
+.divider {
+	border-top: 1px solid #ccc; /* creates a horizontal line */
+	margin: 10px 0; /* adds some space above and below the divider */
+}
+
+/* CSS code for rounded avatar */
+.avatar {
+	position: relative;
+	display: inline-block;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.avatar.primary {
+	margin-right: 10px;
+	z-index: 1;
+}
+
+/* .avatar.secondary {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border: 2px solid white;
+	width: 30px;
+	height: 30px;
+	z-index: 3;
+}
+
+.avatar.secondary img {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+} */
+
+.avatar img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 50%;
+}
+
+.avatar:hover {
+	border-color: #999;
+}
+
+.avatar:hover img {
+	opacity: 0.8;
+}
+
+.avatar-container {
+	position: relative;
+}
+
+.avatar-title {
+	position: absolute;
+	top: -10px;
+	left: 80px;
+	width: 100%;
+	text-align: start;
+	font-size: 24px;
+	color: #333;
 }

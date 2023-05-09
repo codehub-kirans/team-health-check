@@ -1,4 +1,5 @@
 <script>
+	export let data;
 	function checkPasswordMatch() {
 		const password = document.getElementById('password');
 		const passwordConfirm = document.getElementById('passwordConfirm');
@@ -42,14 +43,12 @@
 					required
 				/>
 
-				<input
-					type="text"
-					name="team"
-					placeholder="Team Name"
-					aria-label="Team Name"
-					minlength="3"
-					required
-				/>
+				<select name="team" role="button" class="secondary" required>
+					<option value="" disabled selected>Select Team</option>
+					{#each data.records as record}
+						<option value={record.team}>{record.team}</option>
+					{/each}
+				</select>
 
 				<input
 					name="password"

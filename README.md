@@ -10,14 +10,15 @@ A team (squad) health check application to help build team awareness and perspec
 
 1.  Once you've cloned the project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), download the pocketbase binary for your platform from https://pocketbase.io/docs/. Extract the contents of the downloaded archive under the backend directory
 
-2.  Setup the backend tables for the application by running the migration command. The migration scripts for the standard configured tables are already shipping with the application.
+2. Start the backend server ():
 
 ```bash
-# Setups the backend tables
-./backend/pocketbase migrate up
+# Admin UI will be available at the default port 8090
+# http://127.0.0.1:8090
+./backend/pocketbase serve
 ```
 
-For reference, the migration script creates the following tables for users and team_health
+#### For reference, the migration script creates the following tables for users and team_health
 
 users table
 
@@ -51,7 +52,7 @@ team_health table
 
 ```
 
-It also creates the view collection tables org_summary and team_summary with the following SQL queries:
+#### It also creates the view collection tables org_summary and team_summary with the following SQL queries:
 
 org_summary:
 
@@ -82,13 +83,6 @@ JOIN users u ON th.user = u.id
 GROUP BY u.team, th.sprint;
 ```
 
-3. Start the backend server ():
-
-```bash
-# Admin UI will be available at the default port 8090
-# http://127.0.0.1:8090
-./backend/pocketbase serve
-```
 
 4.  Start a development server:
 

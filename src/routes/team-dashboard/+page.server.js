@@ -14,7 +14,19 @@ export const load = ({ locals }) => {
                     sort: '-sprint',
                 })
             );
-            // console.log('Team Dashboard', records);
+            return records;
+        } catch (err) {
+            console.log('Error: ', err);
+            throw error(err.status, err.message);
+        }
+    };
+
+    const getTeamsRecords = async () => {
+        try {
+            const records = serializeNonPOJOs(
+                await locals.pb.collection('teams').getFullList()
+            );
+
             return records;
         } catch (err) {
             console.log('Error: ', err);
@@ -23,6 +35,7 @@ export const load = ({ locals }) => {
     };
 
     return {
-        records: getSurveyRecords()
+        records: getSurveyRecords(),
+        teams: getTeamsRecords(),
     };
 };

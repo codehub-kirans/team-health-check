@@ -25,7 +25,9 @@
 				/>
 				<span id="message" />
 
-				<a href="/reset-password">Forgot Password?</a>
+				<!-- ToDo
+					<a href="/reset-password">Forgot Password?</a> 
+				-->
 			</fieldset>
 
 			<button>Submit</button>

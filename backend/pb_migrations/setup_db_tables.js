@@ -3,7 +3,7 @@ migrate((db) => {
     {
       "id": "ivw9jslk6j7bq49",
       "created": "2023-03-27 13:26:40.440Z",
-      "updated": "2023-03-29 04:49:03.336Z",
+      "updated": "2023-05-11 18:10:33.452Z",
       "name": "team_health",
       "type": "base",
       "system": false,
@@ -36,7 +36,7 @@ migrate((db) => {
         {
           "system": false,
           "id": "fvzhpd2u",
-          "name": "code_base_health",
+          "name": "codebase_health",
           "type": "number",
           "required": false,
           "unique": false,
@@ -192,7 +192,7 @@ migrate((db) => {
         {
           "system": false,
           "id": "j1d1ccp6",
-          "name": "leading_team_by_example",
+          "name": "manager_leads_team_by_example",
           "type": "number",
           "required": false,
           "unique": false,
@@ -219,9 +219,7 @@ migrate((db) => {
           }
         }
       ],
-      "indexes": [
-        "CREATE INDEX `_ivw9jslk6j7bq49_created_idx` ON \"team_health\" (`created`)"
-      ],
+      "indexes": [],
       "listRule": "",
       "viewRule": "",
       "createRule": "@request.auth.id != \"\" && @request.auth.id = @request.data.user",
@@ -232,14 +230,14 @@ migrate((db) => {
     {
       "id": "k1uqbtp2zqi6lj2",
       "created": "2023-03-28 15:14:40.691Z",
-      "updated": "2023-05-11 09:39:46.631Z",
+      "updated": "2023-05-11 18:10:58.745Z",
       "name": "org_summary",
       "type": "view",
       "system": false,
       "schema": [
         {
           "system": false,
-          "id": "xxr2hjx9",
+          "id": "tutmai8t",
           "name": "sprint",
           "type": "text",
           "required": true,
@@ -252,7 +250,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "emxo0j64",
+          "id": "tswzh0qo",
           "name": "delivering_value",
           "type": "json",
           "required": false,
@@ -261,8 +259,8 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "3yux0tkq",
-          "name": "code_base_health",
+          "id": "wz5tyvre",
+          "name": "codebase_health",
           "type": "json",
           "required": false,
           "unique": false,
@@ -270,7 +268,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "huebtcll",
+          "id": "bg0llc1g",
           "name": "task_planning_and_priority",
           "type": "json",
           "required": false,
@@ -279,7 +277,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "k82cv5nt",
+          "id": "jh1wwuoh",
           "name": "information_sharing",
           "type": "json",
           "required": false,
@@ -288,7 +286,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "7qnhkxyu",
+          "id": "cv7y9mqf",
           "name": "team_work",
           "type": "json",
           "required": false,
@@ -297,7 +295,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "tnforrjh",
+          "id": "pducswvz",
           "name": "events",
           "type": "json",
           "required": false,
@@ -306,7 +304,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "qcbvtbn8",
+          "id": "4yry8ycq",
           "name": "learning_and_fun",
           "type": "json",
           "required": false,
@@ -315,7 +313,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "68hclerw",
+          "id": "hbdmfwuy",
           "name": "pawns_or_players",
           "type": "json",
           "required": false,
@@ -324,7 +322,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "95t2tly1",
+          "id": "c0hpev9k",
           "name": "product_ownership",
           "type": "json",
           "required": false,
@@ -333,7 +331,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "svi5qrgk",
+          "id": "j9btwxps",
           "name": "speed_and_incremental_deliveries",
           "type": "json",
           "required": false,
@@ -342,7 +340,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "l4pugktm",
+          "id": "spesadmz",
           "name": "easy_to_release",
           "type": "json",
           "required": false,
@@ -351,7 +349,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "8gx8pkla",
+          "id": "uo2mfw6a",
           "name": "suitable_processes",
           "type": "json",
           "required": false,
@@ -360,7 +358,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "rshpd2z2",
+          "id": "haznfxny",
           "name": "tooling",
           "type": "json",
           "required": false,
@@ -369,7 +367,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "no0epwhv",
+          "id": "pqko2gjo",
           "name": "support",
           "type": "json",
           "required": false,
@@ -378,8 +376,8 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "bdnhpwjl",
-          "name": "leading_team_by_example",
+          "id": "jkymrwr1",
+          "name": "manager_leads_team_by_example",
           "type": "json",
           "required": false,
           "unique": false,
@@ -393,20 +391,20 @@ migrate((db) => {
       "updateRule": null,
       "deleteRule": null,
       "options": {
-        "query": "SELECT id, sprint, AVG(delivering_value) as delivering_value, AVG(code_base_health) as code_base_health, \n       AVG(task_planning_and_priority) as task_planning_and_priority, AVG(information_sharing) as information_sharing, \n       AVG(team_work) as team_work, AVG(events) as events, AVG(learning_and_fun) as learning_and_fun, \n       AVG(pawns_or_players) as pawns_or_players, AVG(product_ownership) as product_ownership, \n       AVG(speed_and_incremental_deliveries) as speed_and_incremental_deliveries, AVG(easy_to_release) as easy_to_release, \n       AVG(suitable_processes) as suitable_processes, AVG(tooling) as tooling, AVG(support) as support, \n       AVG(leading_team_by_example) as leading_team_by_example \nFROM team_health \nGROUP BY sprint;"
+        "query": "SELECT id, sprint, AVG(delivering_value) as delivering_value, AVG(codebase_health) as codebase_health, \n       AVG(task_planning_and_priority) as task_planning_and_priority, AVG(information_sharing) as information_sharing, \n       AVG(team_work) as team_work, AVG(events) as events, AVG(learning_and_fun) as learning_and_fun, \n       AVG(pawns_or_players) as pawns_or_players, AVG(product_ownership) as product_ownership, \n       AVG(speed_and_incremental_deliveries) as speed_and_incremental_deliveries, AVG(easy_to_release) as easy_to_release, \n       AVG(suitable_processes) as suitable_processes, AVG(tooling) as tooling, AVG(support) as support, \n       AVG(manager_leads_team_by_example) as manager_leads_team_by_example \nFROM team_health \nGROUP BY sprint;"
       }
     },
     {
       "id": "rgnftve7fqaexp0",
       "created": "2023-03-28 16:15:45.034Z",
-      "updated": "2023-05-11 09:39:46.633Z",
+      "updated": "2023-05-11 18:11:12.342Z",
       "name": "team_summary",
       "type": "view",
       "system": false,
       "schema": [
         {
           "system": false,
-          "id": "styfpbsf",
+          "id": "sz38qn5q",
           "name": "team",
           "type": "text",
           "required": true,
@@ -419,7 +417,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "ffmumrah",
+          "id": "tutmai8t",
           "name": "sprint",
           "type": "text",
           "required": true,
@@ -432,7 +430,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "0nidxsyk",
+          "id": "n6gfjgnd",
           "name": "delivering_value",
           "type": "json",
           "required": false,
@@ -441,8 +439,8 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "mzbpnzat",
-          "name": "code_base_health",
+          "id": "t7eqqcpx",
+          "name": "codebase_health",
           "type": "json",
           "required": false,
           "unique": false,
@@ -450,7 +448,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "qazj7ido",
+          "id": "foo4iqcq",
           "name": "task_planning_and_priority",
           "type": "json",
           "required": false,
@@ -459,7 +457,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "pt35tmta",
+          "id": "qhqcvux3",
           "name": "information_sharing",
           "type": "json",
           "required": false,
@@ -468,7 +466,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "hrjiwtmq",
+          "id": "v08q8ruz",
           "name": "team_work",
           "type": "json",
           "required": false,
@@ -477,7 +475,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "iohfjxf4",
+          "id": "8cgtgeh6",
           "name": "events",
           "type": "json",
           "required": false,
@@ -486,7 +484,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "7fpnfn7c",
+          "id": "1ikvstxb",
           "name": "learning_and_fun",
           "type": "json",
           "required": false,
@@ -495,7 +493,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "nvffknii",
+          "id": "cv8k8fx7",
           "name": "pawns_or_players",
           "type": "json",
           "required": false,
@@ -504,7 +502,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "zdezlpmt",
+          "id": "4uu9ibny",
           "name": "product_ownership",
           "type": "json",
           "required": false,
@@ -513,7 +511,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "sc6sbd5h",
+          "id": "fngfetje",
           "name": "speed_and_incremental_deliveries",
           "type": "json",
           "required": false,
@@ -522,7 +520,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "gyu2pkdr",
+          "id": "lnvm26nd",
           "name": "easy_to_release",
           "type": "json",
           "required": false,
@@ -531,7 +529,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "e7rjwhvy",
+          "id": "1qy65fka",
           "name": "suitable_processes",
           "type": "json",
           "required": false,
@@ -540,7 +538,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "buuthzoh",
+          "id": "sh89tsrk",
           "name": "tooling",
           "type": "json",
           "required": false,
@@ -549,7 +547,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "frve0ijh",
+          "id": "zcynr0hl",
           "name": "support",
           "type": "json",
           "required": false,
@@ -558,8 +556,8 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "xscuryqg",
-          "name": "leading_team_by_example",
+          "id": "f2fxcvja",
+          "name": "manager_leads_team_by_example",
           "type": "json",
           "required": false,
           "unique": false,
@@ -573,13 +571,13 @@ migrate((db) => {
       "updateRule": null,
       "deleteRule": null,
       "options": {
-        "query": "SELECT (ROW_NUMBER() OVER()) as id, u.team, th.sprint, AVG(th.delivering_value) as delivering_value, AVG(th.code_base_health) as code_base_health, \n       AVG(th.task_planning_and_priority) as task_planning_and_priority, AVG(th.information_sharing) as information_sharing, \n       AVG(th.team_work) as team_work, AVG(th.events) as events, AVG(th.learning_and_fun) as learning_and_fun, \n       AVG(th.pawns_or_players) as pawns_or_players, AVG(th.product_ownership) as product_ownership, \n       AVG(th.speed_and_incremental_deliveries) as speed_and_incremental_deliveries, AVG(th.easy_to_release) as easy_to_release, \n       AVG(th.suitable_processes) as suitable_processes, AVG(th.tooling) as tooling, AVG(th.support) as support, \n       AVG(th.leading_team_by_example) as leading_team_by_example \nFROM team_health th \nJOIN users u ON th.user = u.id \nGROUP BY u.team, th.sprint;"
+        "query": "SELECT (ROW_NUMBER() OVER()) as id, u.team, th.sprint, AVG(th.delivering_value) as delivering_value, AVG(th.codebase_health) as codebase_health, \n       AVG(th.task_planning_and_priority) as task_planning_and_priority, AVG(th.information_sharing) as information_sharing, \n       AVG(th.team_work) as team_work, AVG(th.events) as events, AVG(th.learning_and_fun) as learning_and_fun, \n       AVG(th.pawns_or_players) as pawns_or_players, AVG(th.product_ownership) as product_ownership, \n       AVG(th.speed_and_incremental_deliveries) as speed_and_incremental_deliveries, AVG(th.easy_to_release) as easy_to_release, \n       AVG(th.suitable_processes) as suitable_processes, AVG(th.tooling) as tooling, AVG(th.support) as support, \n       AVG(th.manager_leads_team_by_example) as manager_leads_team_by_example \nFROM team_health th \nJOIN users u ON th.user = u.id \nGROUP BY u.team, th.sprint;"
       }
     },
     {
       "id": "_pb_users_auth_",
-      "created": "2023-05-11 09:39:46.622Z",
-      "updated": "2023-05-11 09:39:46.626Z",
+      "created": "2023-05-08 08:02:00.098Z",
+      "updated": "2023-05-09 13:14:42.526Z",
       "name": "users",
       "type": "auth",
       "system": false,
@@ -632,9 +630,7 @@ migrate((db) => {
           }
         }
       ],
-      "indexes": [
-        "CREATE INDEX `__pb_users_auth__created_idx` ON `users` (`created`)"
-      ],
+      "indexes": [],
       "listRule": "id = @request.auth.id",
       "viewRule": "id = @request.auth.id",
       "createRule": "",
@@ -652,20 +648,20 @@ migrate((db) => {
       }
     },
     {
-      "id": "u1jqeqn5wqxzpp4",
-      "created": "2023-05-11 09:42:17.484Z",
-      "updated": "2023-05-11 09:43:19.595Z",
+      "id": "4b5hifaqbbhe2d3",
+      "created": "2023-05-09 13:21:47.850Z",
+      "updated": "2023-05-09 13:36:01.961Z",
       "name": "teams",
       "type": "base",
       "system": false,
       "schema": [
         {
           "system": false,
-          "id": "ns29d1as",
+          "id": "apzwbyjv",
           "name": "team",
           "type": "text",
           "required": true,
-          "unique": false,
+          "unique": true,
           "options": {
             "min": 2,
             "max": 50,
@@ -674,7 +670,7 @@ migrate((db) => {
         },
         {
           "system": false,
-          "id": "rxr0ysbo",
+          "id": "2vuxzqv4",
           "name": "org",
           "type": "text",
           "required": true,
@@ -695,20 +691,20 @@ migrate((db) => {
       "options": {}
     },
     {
-      "id": "7vheb2fp2fcgbmf",
-      "created": "2023-05-11 09:43:12.867Z",
-      "updated": "2023-05-11 09:43:12.867Z",
+      "id": "8y0v0e5wt1os7ri",
+      "created": "2023-05-09 17:20:49.638Z",
+      "updated": "2023-05-09 17:34:01.596Z",
       "name": "sprints",
       "type": "base",
       "system": false,
       "schema": [
         {
           "system": false,
-          "id": "268krrq5",
+          "id": "w5kafjsx",
           "name": "sprint",
           "type": "text",
           "required": true,
-          "unique": false,
+          "unique": true,
           "options": {
             "min": 6,
             "max": 6,

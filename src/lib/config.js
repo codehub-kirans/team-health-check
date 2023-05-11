@@ -53,7 +53,7 @@ export const surveyQuestions = [
 		bad: "We deliver bad quality. We are not proud of it and our stakeholders unhappy."
 	},
 	{
-		question: "Code Base Health",
+		question: "Codebase Health",
 		good: "We're proud of the quality of our code! It is clean, easy to read and has great test coverage.",
 		bad: "Our code is messy and difficult to maintain."
 	},
@@ -118,7 +118,7 @@ export const surveyQuestions = [
 		bad: "We keep getting stuck because we can't get the support and help that we ask for."
 	},
 	{
-		question: "Leading Team by Example",
+		question: "Manager Leads Team by Example",
 		good: "Our manager always leads by example and can be trusted to follow through on promised actions",
 		bad: "Our manager does not communicate effectively and cannot help team to deliver value."
 	}

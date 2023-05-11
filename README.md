@@ -1,6 +1,6 @@
 # Team Health Check
 
-A team (squad) health check application to help build team awareness and perspective.
+Team (Squad) health check web application allows for rapid measurement and visualization of how Agile teams are doing in terms of tech health, team health, and product health. It uses a set of predefined questions or statements from different categories, such as collaboration, value, fun, learning, etc., and asks team members to rate them according to a simple traffic light scale (green for good, yellow for ok, red for bad). The results are then aggregated and displayed in a multi-team-level visualization, so that patterns and trends can be observed and addressed. The main purpose of this model is to help teams build up self-awareness about what’s working and what’s not, and to identify improvement opportunities. It also provides leaders with a way to support, not judge, teams.
 
 <p align="center">
   <img alt="Team Dashboard" src="https://github.com/codehub-kirans/team-health-check/blob/main/static/dashboard-example.png?raw=true">

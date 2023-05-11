@@ -1,11 +1,12 @@
 <script>
 	export let id;
 	export let label;
+	export let toolTip;
 </script>
 
 <div>
 	<label for={id} class="label font-medium pb-1">
-		<span class="label-text">{label}</span>
+		<span class="label-text" data-tooltip={toolTip} data-placement="right">{label}</span>
 	</label>
 	{#each [2, 0, -2] as number}
 		<label>

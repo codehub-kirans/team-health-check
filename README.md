@@ -1,6 +1,19 @@
 # Team Health Check
 
-Team (Squad) health check web application allows for rapid measurement and visualization of how Agile teams are doing in terms of tech health, team health, and product health. It uses a set of predefined questions or statements from different categories, such as collaboration, value, fun, learning, etc., and asks team members to rate them according to a simple traffic light scale (green for good, yellow for ok, red for bad). The results are then aggregated and displayed in a multi-team-level visualization, so that patterns and trends can be observed and addressed. The main purpose of this model is to help teams build up self-awareness about what’s working and what’s not, and to identify improvement opportunities. It also provides leaders with a way to support, not judge, teams.
+Team (Squad) health check web application is a tool for quick assessment and visualization of
+how Agile teams perform in three aspects: tech health, team health, and product health. It
+uses a set of behaviour anchors on relevant themes for a high performing team to discuss and
+capture sentiment. For each question or theme, the team/squad discusses if they are closer to
+“awesome” or closer to “bad”, which colour to choose for that indicator, and what the trend is
+(stable, improving, or getting worse). For example, the theme "can we release easily?" might
+elicit responses of "our releases are good/meh/bad" i.e. green, amber and red, the colours of
+a traffic light.
+
+<span style="color:green;">**GREEN**</span>: Things are going very well. Although this does not mean that everything is perfect the team or squad is satisfied and does not see much space for improvement.  
+<span style="color: #ffcc00;">**AMBER**</span>: There are some problems that need to be solved. However, it is not a disaster.  
+<span style="color: red;">**RED**</span>: There is a lot going wrong. Improvements are urgently needed.
+
+The main purpose of this model is to help teams build up self-awareness about what's working and what's not, and to identify improvement opportunities. It also provides leaders with a way to support, not judge, teams. TThe app gathers feedback from everyone in real time and calculates the results. The results are displayed in a multi-team-level visualization, so that patterns and trends can be observed and addressed. The app can also keep a track of the squads progress over time without the need for manual collation.
 
 <p align="center">
   <img alt="Team Dashboard" src="https://github.com/codehub-kirans/team-health-check/blob/main/static/dashboard-example.png?raw=true">
@@ -10,7 +23,7 @@ Team (Squad) health check web application allows for rapid measurement and visua
 
 1.  Once you've cloned the project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), download the pocketbase binary for your platform from https://pocketbase.io/docs/. Extract the contents of the downloaded archive under the backend directory
 
-2. Start the backend server ():
+2.  Start the backend server. The db migration scripts automatically run on first startup to setup the db tables.
 
 ```bash
 # Admin UI will be available at the default port 8090
@@ -18,73 +31,7 @@ Team (Squad) health check web application allows for rapid measurement and visua
 ./backend/pocketbase serve
 ```
 
-#### For reference, the migration script creates the following tables for users and team_health
-
-users table
-
-```bash
-"username"
-"email
-"password"
-
-```
-
-team_health table
-
-```bash
-"sprint"
-"delivering_value"
-"code_base_health"
-"task_planning_and_priority"
-"information_sharing"
-"team_work"
-"events"
-"learning_and_fun"
-"pawns_or_players"
-"product_ownership"
-"speed_and_incremental_deliveries"
-"easy_to_release"
-"suitable_processes"
-"tooling"
-"support"
-"leading_team_by_example"
-"user"
-
-```
-
-#### It also creates the view collection tables org_summary and team_summary with the following SQL queries:
-
-org_summary:
-
-```bash
-SELECT id, sprint, AVG(delivering_value) as delivering_value, AVG(code_base_health) as code_base_health,
-       AVG(task_planning_and_priority) as task_planning_and_priority, AVG(information_sharing) as information_sharing,
-       AVG(team_work) as team_work, AVG(events) as events, AVG(learning_and_fun) as learning_and_fun,
-       AVG(pawns_or_players) as pawns_or_players, AVG(product_ownership) as product_ownership,
-       AVG(speed_and_incremental_deliveries) as speed_and_incremental_deliveries, AVG(easy_to_release) as easy_to_release,
-       AVG(suitable_processes) as suitable_processes, AVG(tooling) as tooling, AVG(support) as support,
-       AVG(leading_team_by_example) as leading_team_by_example
-FROM team_health
-GROUP BY sprint;
-```
-
-team_summary:
-
-```bash
-SELECT (ROW_NUMBER() OVER()) as id, u.team, th.sprint, AVG(th.delivering_value) as delivering_value, AVG(th.code_base_health) as code_base_health,
-       AVG(th.task_planning_and_priority) as task_planning_and_priority, AVG(th.information_sharing) as information_sharing,
-       AVG(th.team_work) as team_work, AVG(th.events) as events, AVG(th.learning_and_fun) as learning_and_fun,
-       AVG(th.pawns_or_players) as pawns_or_players, AVG(th.product_ownership) as product_ownership,
-       AVG(th.speed_and_incremental_deliveries) as speed_and_incremental_deliveries, AVG(th.easy_to_release) as easy_to_release,
-       AVG(th.suitable_processes) as suitable_processes, AVG(th.tooling) as tooling, AVG(th.support) as support,
-       AVG(th.leading_team_by_example) as leading_team_by_example
-FROM team_health th
-JOIN users u ON th.user = u.id
-GROUP BY u.team, th.sprint;
-```
-
-
-4.  Start a development server:
+3.  Start a development server:
 
 ```bash
 npm run dev

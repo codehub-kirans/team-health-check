@@ -29,7 +29,7 @@
 		<p>
 			The main purpose of this model is to help teams build up self-awareness about what's working
 			and what's not, and to identify improvement opportunities. It also provides leaders with a way
-			to support, not judge, teams. TThe app gathers feedback from everyone in real time and
+			to support, not judge, teams. The app gathers feedback from everyone in real time and
 			calculates the results. The results are displayed in a multi-team-level visualization, so that
 			patterns and trends can be observed and addressed. The app can also keep a track of the squads
 			progress over time without the need for manual collation.

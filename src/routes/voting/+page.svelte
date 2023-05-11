@@ -70,8 +70,10 @@
 					id={question.toLowerCase().split(' ').join('_')}
 					label={question}
 					toolTip={good}
+					{count}
 				/>
 			{/each}
+
 			<button>Submit</button>
 		</form>
 	</div>

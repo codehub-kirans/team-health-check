@@ -43,7 +43,7 @@
 					required
 				/>
 
-				<select name="team" role="button" class="secondary" required>
+				<select name="team" role="button" class="contrast" required>
 					<option value="" disabled selected>Select Team</option>
 					{#each data.records as record}
 						<option value={record.team}>{record.team}</option>

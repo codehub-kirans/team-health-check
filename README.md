@@ -13,7 +13,7 @@ a traffic light.
 <span style="color: #ffcc00;">**AMBER**</span>: There are some problems that need to be solved. However, it is not a disaster.  
 <span style="color: red;">**RED**</span>: There is a lot going wrong. Improvements are urgently needed.
 
-The main purpose of this model is to help teams build up self-awareness about what's working and what's not, and to identify improvement opportunities. It also provides leaders with a way to support, not judge, teams. TThe app gathers feedback from everyone in real time and calculates the results. The results are displayed in a multi-team-level visualization, so that patterns and trends can be observed and addressed. The app can also keep a track of the squads progress over time without the need for manual collation.
+The main purpose of this model is to help teams build up self-awareness about what's working and what's not, and to identify improvement opportunities. It also provides leaders with a way to support, not judge, teams. The app gathers feedback from everyone in real time and calculates the results. The results are displayed in a multi-team-level visualization, so that patterns and trends can be observed and addressed. The app can also keep a track of the squads progress over time without the need for manual collation.
 
 <p align="center">
   <img alt="Team Dashboard" src="https://github.com/codehub-kirans/team-health-check/blob/main/static/dashboard-example.png?raw=true">

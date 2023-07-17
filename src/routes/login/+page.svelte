@@ -25,9 +25,8 @@
 				/>
 				<span id="message" />
 
-				<!-- ToDo
-					<a href="/reset-password">Forgot Password?</a> 
-				-->
+				<!-- Setup SMTP Email server under Mail Settings and Application URL under Application in Pocketbase for this to function -->
+				<a href="/reset-password">Forgot Password?</a>
 			</fieldset>
 
 			<button>Submit</button>

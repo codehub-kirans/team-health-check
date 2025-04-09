@@ -21,7 +21,7 @@ The main purpose of this model is to help teams build up self-awareness about wh
 
 ## Running the application locally
 
-1.  Once you've cloned the project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), download the pocketbase binary for your platform from https://pocketbase.io/docs/. Extract the contents of the downloaded archive under the backend directory
+1.  Once you've cloned the project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), download the pocketbase binary for your platform from https://pocketbase.io/docs/. Current supported version of Pocketbase is 0.22. Download the zipped binary from [here](https://github.com/pocketbase/pocketbase/releases/tag/v0.22.33). Extract the contents of the downloaded archive under the backend directory
 
 2.  Start the backend server. The db migration scripts automatically run on first startup to setup the db tables.
 

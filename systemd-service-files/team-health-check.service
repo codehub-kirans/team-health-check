@@ -1,0 +1,19 @@
+[Unit]
+Description=Team Health Check
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/npm run dev -- --host 0.0.0.0 --port 5173
+Restart=on-failure
+User=wizard
+Group=wizard
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=HOME=/home/wizard
+Environment=NODE_ENV=development
+StandardOutput   = append:/home/wizard/apps/team-health-check/stdout.log
+StandardError    = append:/home/wizard/apps/team-health-check/stderr.log
+WorkingDirectory = /home/wizard/apps/team-health-check/
+
+[Install]
+WantedBy=multi-user.target

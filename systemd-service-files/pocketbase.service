@@ -1,0 +1,18 @@
+[Unit]
+Description=Pocketbase
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/wizard/apps/team-health-check/backend/pocketbase serve --http=0.0.0.0:8090
+Restart=on-failure
+User=wizard
+Group=wizard
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=HOME=/home/wizard
+StandardOutput   = append:/home/wizard/apps/team-health-check/backend/std.log
+StandardError    = append:/home/wizard/apps/team-health-check/backend/std.log
+WorkingDirectory = /home/wizard/apps/team-health-check/backend/
+
+[Install]
+WantedBy=multi-user.target

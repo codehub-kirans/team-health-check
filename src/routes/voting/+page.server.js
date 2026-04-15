@@ -1,7 +1,7 @@
 import { error, redirect } from '@sveltejs/kit';
 import { serializeNonPOJOs } from '$lib/assets/js/utils.js';
 
-export const load = ({ locals }) => {
+export const load = async ({ locals }) => {
     if (!locals.pb.authStore.isValid) {
         throw redirect(303, '/login');
     }
@@ -37,10 +37,11 @@ export const load = ({ locals }) => {
         }
     };
 
-    return {
-        sprints: getSprintsRecords(),
-        votedSprints: getVotedSprints(locals.user.id),
-    }
+    const [sprints, votedSprints] = await Promise.all([
+        getSprintsRecords(),
+        getVotedSprints(locals.user.id),
+    ]);
+    return { sprints, votedSprints };
 };
 
 export const actions = {

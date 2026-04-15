@@ -10,20 +10,21 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "latest",
-		"@sveltejs/kit": "latest",
+		"@sveltejs/adapter-auto": "^7.0.1",
+		"@sveltejs/kit": "^2.57.1",
+		"@sveltejs/vite-plugin-svelte": "^7.0.0",
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",
-		"eslint-plugin-svelte3": "latest",
+		"eslint-plugin-svelte": "^3.17.0",
 		"prettier": "latest",
-		"prettier-plugin-svelte": "latest",
-		"svelte": "latest",
-		"vite": "latest"
+		"prettier-plugin-svelte": "^3.5.1",
+		"svelte": "^5.55.4",
+		"vite": "^8.0.8"
 	},
 	"type": "module",
 	"dependencies": {
 		"@picocss/pico": "latest",
 		"dotenv": "latest",
-		"pocketbase": "latest"
+		"pocketbase": "^0.26.8"
 	}
 }

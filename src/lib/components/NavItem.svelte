@@ -6,14 +6,12 @@
 	$: isCurrentPage = $currentPage.endsWith(href);
 </script>
 
-<li>
-	{#if isCurrentPage}
-		<a {href} class="contrast">
-			<slot />
-		</a>
-	{:else}
-		<a {href}>
-			<slot />
-		</a>
-	{/if}
-</li>
+{#if isCurrentPage}
+	<a {href} class="contrast">
+		<slot />
+	</a>
+{:else}
+	<a {href}>
+		<slot />
+	</a>
+{/if}

@@ -95,6 +95,12 @@ article div {
 }
 
 /* Nav */
+header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
 summary[role='link'].secondary:is([aria-current], :hover, :active, :focus) {
 	background-color: transparent;
 	color: var(--secondary-hover);

@@ -24,6 +24,6 @@
 	"dependencies": {
 		"@picocss/pico": "latest",
 		"dotenv": "latest",
-		"pocketbase": "latest"
+		"pocketbase": "^0.26.8"
 	}
 }

@@ -10,15 +10,16 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "latest",
-		"@sveltejs/kit": "latest",
+		"@sveltejs/adapter-auto": "^7.0.1",
+		"@sveltejs/kit": "^2.57.1",
+		"@sveltejs/vite-plugin-svelte": "^7.0.0",
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-svelte3": "latest",
 		"prettier": "latest",
 		"prettier-plugin-svelte": "latest",
-		"svelte": "latest",
-		"vite": "latest"
+		"svelte": "^5.55.4",
+		"vite": "^8.0.8"
 	},
 	"type": "module",
 	"dependencies": {

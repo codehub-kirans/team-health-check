@@ -15,9 +15,9 @@
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",
-		"eslint-plugin-svelte3": "latest",
+		"eslint-plugin-svelte": "^3.17.0",
 		"prettier": "latest",
-		"prettier-plugin-svelte": "latest",
+		"prettier-plugin-svelte": "^3.5.1",
 		"svelte": "^5.55.4",
 		"vite": "^8.0.8"
 	},

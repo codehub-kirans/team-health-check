@@ -49,6 +49,9 @@ export const actions = {
         const formData = await request.formData();
 
         formData.append('user', locals.user.id);
+        // Snapshot the user's current team so historical comments/votes
+        // remain attributed to the team they were on at vote time.
+        formData.append('team', locals.user.team ?? '');
         // console.log(formData);
         try {
             await locals.pb.collection('team_health').create(formData);

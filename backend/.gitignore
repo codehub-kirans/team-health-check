@@ -1,4 +1,5 @@
 /pb_data
 /pb_migrations/*.js
-!/pb_migrations/0001_setup_db_tables.js
+!/pb_migrations/setup_db_tables.js
+!/pb_migrations/[0-9]*.js
 pocketbase

@@ -1,10 +1,13 @@
 <script>
-	import { ColumnRender } from '$lib/components';
+	import { ColumnRender, CommentsModal } from '$lib/components';
 	import { surveyQuestions } from '$lib/config';
 
 	export let data;
 	let recordCount = 1;
 	let selectedTeam = '';
+	let openSprint = '';
+	let modalOpen = false;
+
 	function getTeamSurveyCount(data, selectedTeam) {
 		let entries = 0;
 
@@ -15,6 +18,23 @@
 		}
 		return entries;
 	}
+
+	function openSprintComments(sprint) {
+		openSprint = sprint;
+		modalOpen = true;
+	}
+
+	$: if (selectedTeam !== undefined) {
+		// reset the modal whenever the user picks a different team
+		modalOpen = false;
+		openSprint = '';
+	}
+
+	$: filteredComments = data.comments
+		? data.comments.filter(
+				(c) => c.sprint === openSprint && (selectedTeam === '' || c.team === selectedTeam)
+		  )
+		: [];
 </script>
 
 <h1>Team Health Check Dashboard</h1>
@@ -35,14 +55,16 @@
 	{selectedTeam} Team has recorded {getTeamSurveyCount(data, selectedTeam)} sprint entries.
 	<figure>
 		<table role="grid">
-			<caption><strong>Health Check Trend</strong></caption>
+			<caption><strong>Health Check Trend</strong> — click a sprint to see comments</caption>
 			<thead>
 				<tr>
 					<th scope="col"><em>Category</em></th>
-					<ColumnRender {data} fieldName="sprint" team={selectedTeam} />
-					<!-- {#each data.records as record}
-						<td>{record.sprint}</td>
-					{/each} -->
+					<ColumnRender
+						{data}
+						fieldName="sprint"
+						team={selectedTeam}
+						onSprintClick={openSprintComments}
+					/>
 				</tr>
 			</thead>
 			<tbody>
@@ -59,9 +81,13 @@
 					</tr>
 				{/each}
 			</tbody>
-			<!-- <tfoot>
-				<th scope="row">Overall</th>
-			</tfoot> -->
 		</table>
 	</figure>
+
+	<CommentsModal
+		bind:open={modalOpen}
+		sprint={openSprint}
+		title={`Team ${selectedTeam} — comments for sprint ${openSprint}`}
+		comments={filteredComments}
+	/>
 {/if}

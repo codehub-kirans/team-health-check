@@ -13,7 +13,7 @@
 		<input type="radio" name={id} value={number} />
 
 		{#if number === 2}
-			Awsome! 🥳
+			Awesome! 🥳
 		{:else if number === 0}
 			Meh 😐
 		{:else}
@@ -21,4 +21,10 @@
 		{/if}
 	</label>
 {/each}
+<textarea
+	name={`${id}_comment`}
+	maxlength="1000"
+	rows="2"
+	placeholder="Optional comment…"
+></textarea>
 <br />

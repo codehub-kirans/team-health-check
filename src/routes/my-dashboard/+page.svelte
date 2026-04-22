@@ -1,8 +1,20 @@
 <script>
-	import { ColumnRender } from '$lib/components';
+	import { ColumnRender, CommentsModal } from '$lib/components';
 	import { surveyQuestions } from '$lib/config';
 
 	export let data;
+
+	let openSprint = '';
+	let modalOpen = false;
+
+	function openSprintComments(sprint) {
+		openSprint = sprint;
+		modalOpen = true;
+	}
+
+	$: filteredComments = data.records
+		? data.records.filter((r) => r.sprint === openSprint)
+		: [];
 </script>
 
 <h1>My Voting History Dashboard</h1>
@@ -12,11 +24,11 @@
 	You have voted {data.records.length} time(s).
 	<figure>
 		<table role="grid">
-			<caption><strong>Health Check Trend</strong></caption>
+			<caption><strong>Health Check Trend</strong> — click a sprint to see your comments</caption>
 			<thead>
 				<tr>
 					<th scope="col"><em>Category</em></th>
-					<ColumnRender {data} fieldName="sprint" />
+					<ColumnRender {data} fieldName="sprint" onSprintClick={openSprintComments} />
 				</tr>
 			</thead>
 			<tbody>
@@ -29,9 +41,13 @@
 					</tr>
 				{/each}
 			</tbody>
-			<!-- <tfoot>
-				<th scope="row">Overall</th>
-			</tfoot> -->
 		</table>
 	</figure>
+
+	<CommentsModal
+		bind:open={modalOpen}
+		sprint={openSprint}
+		title={`My comments for sprint ${openSprint}`}
+		comments={filteredComments}
+	/>
 {/if}
